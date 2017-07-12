@@ -24,7 +24,7 @@ public class Main {
 	@SuppressWarnings("deprecation")
 	public static void status_analyze(String filename) throws IllegalArgumentException, IOException, ClassNotFoundException, InterruptedException{
 		 System.out.println("--------------------------------------status_analyze begins--------------------------------------");
-		 job = new Job(conf, "status_analyze");
+		 	job = new Job(conf, "status_analyze");
 	        job.setJarByClass(Main.class);
 	        job.setMapperClass(StatusMapper.class);
 	        job.setCombinerClass(StatusReducer.class);

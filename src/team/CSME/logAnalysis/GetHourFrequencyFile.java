@@ -17,8 +17,6 @@ import java.util.StringTokenizer;
 import java.util.Map.Entry;
 
 
-
-
 public class GetHourFrequencyFile {
 
     public static void main(String[] args) throws Exception {

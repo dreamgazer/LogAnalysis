@@ -13,7 +13,7 @@ public class HourFrequencyMapper extends Mapper<Object, Text, Text, IntWritable>
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {        
     	LogItem item=new LogItem(value.toString());
     	if(item.getUrl().equals("null")||item.getUrl().equals("-")) return;
-    	newKey.set((String.valueOf(item.getUrl())+"#"+item.getStart_hour()));
+    	newKey.set((String.valueOf(item.getUrl())+"#"+item.getStart_hour()+"#"+item.getDate()));
     	context.write(newKey, one);
     }
 }

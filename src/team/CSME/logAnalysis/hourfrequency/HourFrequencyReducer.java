@@ -16,6 +16,6 @@ public class HourFrequencyReducer extends Reducer<Text, IntWritable, Text, IntWr
         }
         result.set(sum);
         context.write(key, result);
-    //  System.out.println(key+" "+result);
+   //  System.out.println(key+" "+result);
     }
 }

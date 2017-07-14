@@ -12,7 +12,6 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
 import team.CSME.logAnalysis.Hfrequency.*;
-import team.CSME.logAnalysis.hourfrequency.*;
 
 public class HourFrequencyMain {
 	
@@ -25,12 +24,12 @@ public class HourFrequencyMain {
 			otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 		
         if (otherArgs.length != 2) {
-            System.err.println("Usage: wordcount <in> <out>");
+            System.err.println("Usage: prediction <in> <out>");
             System.exit(2);
         }
 
 		try {
-			job = new Job(conf, "status_analyze");
+			job = new Job(conf, "prediction ");
 		
         job.setJarByClass(Main.class);
         job.setMapperClass(HfreuencyMapper.class);
@@ -60,18 +59,6 @@ public class HourFrequencyMain {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        /*
-        Job job = new Job(conf, "HourFrequency");
-        job.setJarByClass(HourFrequencyMain.class);
-        job.setMapperClass(HourFrequencyMapper.class);
-        job.setCombinerClass(HourFrequencyReducer.class);
-        job.setReducerClass(HourFrequencyReducer.class);
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
-       job.setOutputFormatClass(HourFrequencyOutputFormat.class);
-        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
-        */
+
 	}
 }

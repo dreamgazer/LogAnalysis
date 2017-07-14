@@ -16,6 +16,6 @@ public class HfreuencyReducer extends Reducer<Text, IntWritable, Text, IntWritab
         }
         result.set(sum);
         context.write(key, result);
-      System.out.println(key+" "+result);
+    //  System.out.println(key+" "+result);
     }
 }

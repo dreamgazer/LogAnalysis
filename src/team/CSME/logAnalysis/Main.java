@@ -57,7 +57,7 @@ public class Main {
 	
 	@SuppressWarnings("deprecation")
 	public static void frequency_analyze(String filename) throws IllegalArgumentException, IOException, ClassNotFoundException, InterruptedException{
-		System.out.println("--------------------------------------frequency_analyze begins--------------------------------------f");
+		System.out.println("--------------------------------------frequency_analyze begins--------------------------------------");
 		job = new Job(conf, "frequency_analyze");
         job.setJarByClass(Main.class);
         job.setMapperClass(FrequencyMapper.class);

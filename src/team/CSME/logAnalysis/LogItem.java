@@ -25,7 +25,6 @@ public class LogItem {
 				this.respond_time=respond_time;
 			}
 			
-			
 			public LogItem(String Log_str){
 				Pattern pattern;
 				Matcher matcher ;
